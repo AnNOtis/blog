@@ -3,7 +3,8 @@
 ###
 
 # Time.zone = "UTC"
-
+activate :syntax
+set :markdown_engine, :kramdown
 activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
   # blog.prefix = "blog"
@@ -77,6 +78,7 @@ page "/feed.xml", layout: false
 #     "Helping"
 #   end
 # end
+
 
 set :css_dir, 'stylesheets'
 
