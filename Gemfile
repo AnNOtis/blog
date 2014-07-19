@@ -12,3 +12,5 @@ gem 'rouge'
 # gem "redcarpet"
 
 gem "nokogiri"
+
+gem 'middleman-gh-pages'
