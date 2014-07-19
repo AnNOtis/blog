@@ -5,7 +5,7 @@ tags:
 ---
 
 
-YOYOYOOYOYOYOYOOY
+YOYOYOOY```$ brew install rails```YOYOOY
 
 
 ~~~ruby
