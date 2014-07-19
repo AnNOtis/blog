@@ -1,0 +1,14 @@
+/* line 1, /Users/otischou/develop/middleman/blog/source/stylesheets/footer.css.scss */
+.footer {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  height: 80px;
+  width: 640px;
+  margin: 0 auto;
+  margin-left: -320px;
+  border-top: 2px solid #3b3b6d;
+  padding: 10px 0; }
+  /* line 11, /Users/otischou/develop/middleman/blog/source/stylesheets/footer.css.scss */
+  .footer .power-by {
+    text-align: center; }

@@ -1,0 +1,36 @@
+/* line 1, /Users/otischou/develop/middleman/blog/source/stylesheets/nav.css.scss */
+nav {
+  position: relative;
+  width: 640px;
+  border-bottom: 2px solid #3b3b6d;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  font-family: 'Montserrat', sans-serif; }
+  /* line 10, /Users/otischou/develop/middleman/blog/source/stylesheets/nav.css.scss */
+  nav .logo {
+    font-size: 28px;
+    text-decoration: none;
+    color: #3b3b3b; }
+    /* line 14, /Users/otischou/develop/middleman/blog/source/stylesheets/nav.css.scss */
+    nav .logo .bold {
+      font-weight: bold;
+      color: #3b3b3b;
+      transition: color 0.5s; }
+    /* line 19, /Users/otischou/develop/middleman/blog/source/stylesheets/nav.css.scss */
+    nav .logo:hover .bold {
+      color: #4c83be; }
+  /* line 23, /Users/otischou/develop/middleman/blog/source/stylesheets/nav.css.scss */
+  nav .menu {
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+    margin: 0;
+    height: 28px; }
+    /* line 29, /Users/otischou/develop/middleman/blog/source/stylesheets/nav.css.scss */
+    nav .menu .item {
+      line-height: 28px;
+      float: left;
+      list-style-type: none;
+      padding: 0 20px;
+      cursor: pointer; }

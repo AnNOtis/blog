@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title>Code test</title>
+    <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic|Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href="/stylesheets/normalize.css" rel="stylesheet" type="text/css" /><link href="/stylesheets/all.css" rel="stylesheet" type="text/css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+  </head>
+
+  <body class="x2014 x2014_07 x2014_07_18 x2014_07_18_i_love_annie">
+    <nav>
+      <a class="logo" href="/"><span class="bold">OTIS</span>.blog</a>
+      <ul class="menu">
+        <li class="item">TALKS</li>
+        <li class="item">TAGS</li>
+      </ul>
+    </nav>
+    <div class="container">
+        <div class="posts">
+    <div class="header">
+      <h1>Code test</h1>
+      <div class="date">JULY 18, 2014</div>
+    </div>
+    <!-- use article.summary(250) if you have Nokogiri available to show just
+         the first 250 characters -->
+    <div class="content">
+      <div class="chapter-hint"></div>
+      <p>YOYOYOOY<code>$ brew install rails</code>YOYOOY</p>
+
+<pre><code class="highlight ruby">  <span class="n">asd</span> <span class="o">=</span> <span class="p">[</span><span class="mi">123</span><span class="p">,</span><span class="mi">123123</span><span class="p">,</span><span class="mi">123</span><span class="p">]</span>
+  <span class="n">asd</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">a</span><span class="o">|</span>
+    <span class="nb">puts</span> <span class="n">a</span>
+  <span class="k">end</span>
+</code></pre>
+
+
+    </div>
+  </div>
+
+    </div>
+    <div class="footer">
+      <div class="power-by">2014 by Otis Chou</div>
+      <div class="contact"></div>
+    </div>
+  </body>
+</html><script>
+  var h2_list = [];
+  $().ready(function() {
+    $("h2").each(function(index,item) {
+      h2_list[index] = { position: $(item).offset().top, $elem: $(item)}
+    })
+    $( window ).scroll(function() {
+      var $current_p = get_current_p($(this).scrollTop());
+      if($current_p){
+        $(".chapter-hint").text($current_p.text()).css('top', $(this).scrollTop());
+        $(".chapter-hint").css('opacity', 0.5);
+      }else{
+        $(".chapter-hint").css('opacity', 0);
+      }
+    });
+  });
+  function get_current_p(scroll_position) {
+    var $result
+    $.each(h2_list, function(index, item) {
+      if(scroll_position > item.position){
+        $result = item.$elem
+      }
+    });
+    return $result;
+  };
+
+</script>
