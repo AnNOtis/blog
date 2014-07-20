@@ -61,16 +61,17 @@ nav{
   padding-bottom: 5px;
   font-family: 'Montserrat', sans-serif;
   .logo{
-    font-size: 28px;
+    font-size: 30px;
     text-decoration: none;
     color: rgb(59, 59, 59);
     .bold{
+      font-size: 2em;
       font-weight: bold;
       color: rgb(59, 59, 59);
       transition: color 0.5s;
     }
     &:hover .bold{
-      color: rgb(76, 131, 190);
+      color: rgb(48, 89, 133);
     }
   }
   .menu{

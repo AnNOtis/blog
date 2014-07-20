@@ -52,5 +52,6 @@ Middleman是用Ruby所寫的，在安裝Middleman之前必須先安裝Ruby，安
 ![alt text](/images/middleman-opening.png "Middleman Opening")
 
 ##使用Blog extension
+Middleman有官方的extension支援部落格功能，功能包括
 
 
