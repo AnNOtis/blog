@@ -250,7 +250,7 @@
 }
 
 .container pre {
-  margin: 30px 0 50px 0;
+  margin: 10px 0 50px 0;
 }
 .container p+p{
   // text-indent: 2em;
@@ -342,6 +342,14 @@
 
 
 .posts{
+  h2:before{
+    position: absolute;
+    left: -22px;
+    background-color: rgb(202, 113, 113);
+    width: 3px;
+    height: 100%;
+    content: "";
+  }
   .header{
     position: relative;
     text-align: left;
@@ -351,7 +359,7 @@
       content: "";
       position: absolute;
       height: 100%;
-      width: 8px;
+      width: 10px;
       background-color: rgb(202, 113, 113);
       left: -30px;
       top: 0;
@@ -381,6 +389,28 @@ ul.article-list{
     list-style-type: none;
     margin: 1.4em 0;
   }
+  li:hover .summary-btn{
+    display: inline-block;
+    opacity: 1;
+  }
+  .summary-btn{
+    position: absolute;
+    right: 0;
+    top: -20px;
+    font-size: 0.4em;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .summary{
+    // display: none;
+    padding-left: 20px;
+    font-size: 12px;
+    line-height: 0;
+    h2,h3{
+      font-size: 1.4em;
+      margin: 0;
+    }
+  }
   .title{
     display: inline-block;
     width: 100%;
@@ -397,16 +427,16 @@ ul.article-list{
 
 .chapter-hint{
   position: absolute;
-  opacity:0.5;
+  opacity:0.9;
   width: 130px;
   margin-top: 70px;
   margin-left: -170px;
-  transition: opacity 0.7s;
+  transition: opacity 0.5s;
   padding: 14px 0;
   padding-right: 10px;
   text-align: right;
   font-size: 1.2em;
-  color: rgb(32, 92, 156);
+  color: rgb(202, 113, 113);
   border-right: 2px solid #eee;
 }
 ::selection {
