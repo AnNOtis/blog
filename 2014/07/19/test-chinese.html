@@ -70,7 +70,7 @@
       var $current_p = get_current_p($(this).scrollTop());
       if($current_p){
         $(".chapter-hint").text($current_p.text()).css('top', $(this).scrollTop());
-        $(".chapter-hint").css('opacity', 0.5);
+        $(".chapter-hint").css('opacity', 0.9);
       }else{
         $(".chapter-hint").css('opacity', 0);
       }
@@ -79,7 +79,7 @@
   function get_current_p(scroll_position) {
     var $result
     $.each(h2_list, function(index, item) {
-      if(scroll_position > item.position){
+      if(scroll_position+50 > item.position){
         $result = item.$elem
       }
     });

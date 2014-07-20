@@ -5,16 +5,84 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2014-07-20T07:10:00+08:00</updated>
+  <updated>2014-07-20T14:35:00+08:00</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>使用Middleman架部落格</title>
+    <link rel="alternate" href="http://blog.url.com/2014/07/20/building_blog_with_middleman.html"/>
+    <id>http://blog.url.com/2014/07/20/building_blog_with_middleman.html</id>
+    <published>2014-07-20T14:35:00+08:00</published>
+    <updated>2014-07-20T21:20:00+08:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;h3 id="section"&gt;參考文件&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href="http://www.patricklenz.co/blog/2013/6/2/moving-to-middleman"&gt;Moving to Middleman&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="http://middlemanapp.com/"&gt;Middleman官方文件&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id="middleman"&gt;安裝 Middleman&lt;/h2&gt;
+
+&lt;p&gt;Middleman是用Ruby所寫的，在安裝Middleman之前必須先安裝Ruby，安裝可以參考這篇 &lt;a href="https://www.ruby-lang.org/zh_tw/downloads/"&gt;Ruby下載安裝&lt;/a&gt;，Mac OS X Mavericks 系統內建 Ruby 2.0.0，可以用&lt;code&gt;ruby -v&lt;/code&gt;進行確認是否安裝。&lt;/p&gt;
+
+&lt;p&gt;在command line中執行以下指令，開始安裝Middleman:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight shell"&gt;  &lt;span class="nv"&gt;$ &lt;/span&gt;gem install middleman
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;安裝過程會花五到十分鐘…  十分鐘過後…&lt;/p&gt;
+
+&lt;p&gt;安裝成功後Middleman會提供三個指令&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;初始化一個新的Middleman專案&lt;/p&gt;
+
+    &lt;p&gt;&lt;code&gt;
+  middleman init
+&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;將專案編譯成靜態檔案&lt;/p&gt;
+
+    &lt;p&gt;&lt;code&gt;
+middleman build
+&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;啟動server (預設是&lt;a href="http://localhost:4567"&gt;http://localhost:4567&lt;/a&gt;)&lt;/p&gt;
+
+    &lt;p&gt;&lt;code&gt;
+middleman server
+&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="section-1"&gt;建立新的專案&lt;/h2&gt;
+&lt;p&gt;使用以下指令建立Middleman專案:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="highlight shell"&gt;  &lt;span class="nv"&gt;$ &lt;/span&gt;middleman init my_middleman_project
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;輸入&lt;code&gt;middleman server&lt;/code&gt;開啓Server，打開browser前往&lt;a href="http://localhost:4567"&gt;http://localhost:4567&lt;/a&gt;，看到以下畫面表示成功建立專案：&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="alt text" title="Middleman Opening" src="/images/middleman-opening.png" /&gt;&lt;/p&gt;
+
+&lt;h2 id="blog-extension"&gt;使用Blog extension&lt;/h2&gt;
+
+</content>
+  </entry>
   <entry>
     <title>Lorem-Markdownum</title>
     <link rel="alternate" href="http://blog.url.com/2014/07/19/lorem-markdownum.html"/>
     <id>http://blog.url.com/2014/07/19/lorem-markdownum.html</id>
     <published>2014-07-20T07:10:00+08:00</published>
-    <updated>2014-07-20T07:11:11+08:00</updated>
+    <updated>2014-07-20T14:09:35+08:00</updated>
     <author>
       <name>Article Author</name>
     </author>
