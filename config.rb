@@ -30,6 +30,12 @@ activate :blog do |blog|
   # blog.page_link = "page/{num}"
 end
 
+# Activate Disqus extension
+activate :disqus do |d|
+  d.shortname = "altispec"
+end
+
+
 page "/feed.xml", layout: false
 
 ###

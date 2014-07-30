@@ -14,3 +14,10 @@ gem 'rouge'
 gem "nokogiri"
 
 gem 'middleman-gh-pages'
+
+
+#disqus
+gem "middleman-disqus"
+
+#for config.ru try_static
+gem "rack-contrib"
