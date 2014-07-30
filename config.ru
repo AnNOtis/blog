@@ -1,6 +1,8 @@
 require 'rack'
 require 'rack/contrib/try_static'
 
+`bundle exec middleman build`
+
 # Serve files from the build directory
 use Rack::TryStatic,
   root: 'build',
@@ -8,6 +10,12 @@ use Rack::TryStatic,
   try: ['.html', 'index.html', '/index.html']
 
 run lambda{ |env|
-  four_oh_four_page = File.expand_path("../build/404/index.html", __FILE__)
-  [ 404, { 'Content-Type'  => 'text/html'}, [ File.read(four_oh_four_page) ]]
+  [
+    404,
+    {
+      "Content-Type"  => "text/html",
+      "Cache-Control" => "public, max-age=60"
+    },
+    File.open("build/404/index.html", File::RDONLY)
+  ]
 }
