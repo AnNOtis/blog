@@ -9,5 +9,5 @@ use Rack::TryStatic,
 
 run lambda{ |env|
   four_oh_four_page = File.expand_path("../build/404/index.html", __FILE__)
-  [ 404, { 'Content-Type'  => 'text/html'}, [ File.read(four_oh_four_page) ]]
+  [ 404, { 'Content-Type'  => 'text/html'}, [ File.open('build/index.html', File::RDONLY) ]]
 }
