@@ -6,6 +6,7 @@
 
 body {
   // background-image: url(http://subtlepatterns.com/patterns/noisy_grid.png);
+  min-height: 500px;
 }
 
 
@@ -97,6 +98,12 @@ nav{
   margin-top: 150px;
   border-top: 1px solid rgb(59, 59, 109);
   padding: 20px 80px;
+  &.fixed-bottom{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -400px;
+  }
   .power-by{
     text-align: center;
     a{
