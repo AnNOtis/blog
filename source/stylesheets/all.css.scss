@@ -5,7 +5,7 @@
 @charset "utf-8";
 
 body {
-  background-image: url(http://subtlepatterns.com/patterns/noisy_grid.png);
+  // background-image: url(http://subtlepatterns.com/patterns/noisy_grid.png);
 }
 
 
@@ -53,12 +53,12 @@ body {
 }
 nav{
   // height: 100px;
+  box-sizing: border-box;
   position: relative;
-  width: 640px;
-  border-bottom: 2px solid rgb(59, 59, 109);
+  width: 800px;
+  padding: 20px 80px 5px 80px;
+  border-bottom: 1px solid #999;
   margin: 0 auto;
-  padding-top: 20px;
-  padding-bottom: 5px;
   font-family: 'Montserrat', sans-serif;
   .logo{
     font-size: 30px;
@@ -76,7 +76,7 @@ nav{
   }
   .menu{
     position: absolute;
-    right: 0;
+    right: 80px;
     bottom: 5px;
     margin: 0;
     height: 28px;
@@ -91,12 +91,25 @@ nav{
 }
 .footer{
   height: 60px;
-  width: 640px;
+  width: 800px;
   margin: 0 auto;
   margin-top: 150px;
-  border-top: 2px solid rgb(59, 59, 109);
-  padding: 10px 0;
+  border-top: 1px solid rgb(59, 59, 109);
+  padding: 20px 80px;
   .power-by{
     text-align: center;
+    a{
+      color:#333;
+      text-decoration: underline;
+      &:hover{
+        color:#333;
+      }
+      &:active{
+        color:#333;
+      }
+      &:visited{
+        color:#333;
+      }
+    }
   }
 }
