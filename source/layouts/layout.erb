@@ -7,7 +7,7 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
 
     <!-- Use title if it's in the page YAML frontmatter -->
-    <title><%= current_page.data.title || "The Middleman" %></title>
+    <title><%= current_page.data.title || "Otis Blog" %></title>
     <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic|Montserrat:400,700' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag "normalize", "all" %>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -21,7 +21,12 @@
         <li class="item">ARTICLES</li>
         <li class="item">TAGS</li>
       </ul>
+      <div class="extend">
+        <p>Do a little more of what you want to do every day,</p>
+        <p>until your idea becomes what's real.</p>
+      </div>
     </nav>
+
     <div class="container">
       <%= yield %>
     </div>
