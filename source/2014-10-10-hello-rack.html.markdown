@@ -111,7 +111,8 @@ class RackApp
   def convert_hash_to_table(hash)
     result = "<table border='1'>"
     hash.each do |key, value|
-      result +="""
+      result +=
+      """
         <tr>
           <td>#{key}</td>
           <td>#{value}</td>

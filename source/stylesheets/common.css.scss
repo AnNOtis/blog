@@ -68,12 +68,14 @@
 .container a {
   color: rgb(32, 92, 156);
   text-decoration: none;
-  transition: color 0.3s;
+  transition: all 0.3s;
+  border-bottom: 2px solid transparent;
 }
 
 .container a:hover {
   color: rgb(32, 92, 156);
   text-decoration: none;
+  border-bottom: 2px solid;
 }
 
 .container a:focus,
