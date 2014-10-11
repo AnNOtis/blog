@@ -1,6 +1,6 @@
 ---
 title: Hello Rack
-date: 2014-07-28 10:59 UTC
+date: 2014-10-11 10:59 UTC
 tags: Ruby
 published: true
 ---
@@ -19,9 +19,9 @@ published: true
 
 > The Rack application is an object that responds to the call method, taking the environment hash as a parameter, and returning an Array with three elements: status, headers and a body
 
-舉例來說，你可以這樣
+舉例來說，這就是一個簡單的Rack application
 
-``` ruby
+~~~ ruby
 require "rack" # Core Ruby Lib doesn't include Rack
 
 class HelloRack
@@ -31,8 +31,9 @@ class HelloRack
 end
 
 Rack::Handler::WEBrick.run HelloRack.new
-```
-我們要讓它動起來～ 必須使用Rack::Handler，這是Rack連接Web Server的介面，讓我們可以把程式跑在Server上，Handler提供不同的Http Server，如Thin, WEBrick, FastCGI([Handler列表][RackHandler])，在這邊我們使用*Webrick*，```Rack::Handler::WEBrick.run```呼叫```HelloRack.new```
+~~~
+
+但我們要讓它動起來～ 必須使用```Rack::Handler```，這是Rack連接Web Server的介面，讓我們可以把程式跑在Server上，Handler可以連接不同的Http Server，如 Thin, WEBrick, FastCGI... ([Handler列表][RackHandler])，在這邊使用*Webrick*，所以```Rack::Handler::WEBrick.run HelloRack.new```啟動server
 
 執行```ruby hello_rack.rb```，開啟瀏覽器 http://localhost:8080，會看到以下畫面：
 
@@ -42,18 +43,18 @@ Rack::Handler::WEBrick.run HelloRack.new
 
 實際上畫面的回應是來自於**call**這個方法的**回傳值**，回傳值在Rack的spec定義必須是一個**Array**，
 
-```
+~~~
 [ Status Code, Http Header, Response body ]
-```
+~~~
 - Status code: 可以指定200, 400, 302等
 - Http headers: http的標頭，型態需為**hash**，hash的內容至少要指定content-type，例：{"Content-Type" => "text/html"}
 - Response body: 回傳的內容，此物件必須能夠回應each這個方法，使用array就可以了，如果他有多個Response body則會由第一個元素開始輸出。
 
 所以如果call回傳的是像這樣的內容：
 
-```
+~~~ ruby
 [ 200, {"Content-Type" => "text/html"}, ["Hello Rack!"] ]
-```
+~~~
 打開chrome console來看：
 ![Rack Response][2]
 
@@ -62,7 +63,7 @@ Rack::Handler::WEBrick.run HelloRack.new
 ## Request
 call裡面傳入參數env，但在上一段的程式完全沒有用到，那是因為上一個程式只是為了輸出hello world的字樣，而call所接收的唯一的參數，就是environment的資訊，那environment的資訊包含哪些呢？利用上一節的response，我們可以把environment打開來看看裡頭有什麼。
 
-```
+~~~ ruby
 require "rack"
 
 class RackApp
@@ -72,7 +73,7 @@ class RackApp
 end
 
 Rack::Handler::WEBrick.run RackApp.new
-```
+~~~
 執行結果：
 ![Rack Environment 1][3]
 
@@ -84,13 +85,13 @@ Rack::Handler::WEBrick.run RackApp.new
 作為練習，要來做一個稍微有點功能的應用程式啦，需求是這樣的，我可以下http://locahost:8080/request_method，去查詢該environemtn的參數，如果沒有子路徑的話，就回傳所有參數，回傳的參數必須要用html的table顯示（比較好看 :D），無此參數就回傳“查無結果”。
 
 ###STEP
-1. 寫一個```convert_hash_to_table```的方法
-2. 將```"Content-Type" => "text/plain"```改為html
-3. 找到路徑env['REQUEST_PATH']
+1. 寫一個 *convert_hash_to_table* 的方法
+2. 將 *"Content-Type" => "text/plain"* 改為 *text/html*
+3. 找到路徑 *env['REQUEST_PATH']*
 4. 判斷是否有此environment參數
 5. 輸出結果
 
-``` ruby
+~~~ ruby
 require 'rack'
 class RackApp
   def call(env)
@@ -123,14 +124,14 @@ end
 Rack::Handler::WEBrick.run RackApp.new
 
 # ruby rack_app.rb
-```
+~~~
 
 ## 後續發展
 
-基本的rack就是這樣啦，下個相關的研究議題**什麼是rack middleware**、**Rails中的rack middleware**，改天介紹。
+基本的rack就是這樣啦，下個相關的研究議題 **什麼是Rack Middleware?**、**Rails中的Rack Middleware**，改天介紹。
 
 
-參考文獻
+##參考文獻
 - [Rack官網](http://rack.github.io/)
 - [RailsCast 151-Rack-middleware](http://asciicasts.com/episodes/151-rack-middleware)
 - [Rack app with uri and HTTP specific responses](https://github.com/rack/rack/wiki/Rack-app-with-uri-and-HTTP-specific-responses)
@@ -139,6 +140,6 @@ Rack::Handler::WEBrick.run RackApp.new
 
 [RackHandler]: https://github.com/rack/rack/tree/master/lib/rack/handler
 
-[1]: https://github.com/AnNOtis/blog/blob/master/source/images/hello-rack/1.png
-[2]: https://github.com/AnNOtis/blog/blob/master/source/images/hello-rack/2.png
-[3]: https://github.com/AnNOtis/blog/blob/master/source/images/hello-rack/3.png
+[1]: /images/hello-rack/1.png
+[2]: /images/hello-rack/2.png
+[3]: /images/hello-rack/3.png
