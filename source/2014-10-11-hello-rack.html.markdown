@@ -33,7 +33,7 @@ end
 Rack::Handler::WEBrick.run HelloRack.new
 ~~~
 
-但我們要讓它動起來～ 必須使用```Rack::Handler```，這是Rack連接Web Server的介面，讓我們可以把程式跑在Server上，Handler可以連接不同的Http Server，如 Thin, WEBrick, FastCGI... ([Handler列表][RackHandler])，在這邊使用*Webrick*，所以```Rack::Handler::WEBrick.run HelloRack.new```啟動server
+但我們要讓它動起來～ 必須使用```Rack::Handler```，這是Rack連接Web Server的介面，讓我們可以把程式跑在Server上，Handler可以連接不同的Http Server，如 Thin, WEBrick, FastCGI... ([Handler列表][RackHandler])，在這邊使用*Webrick*啟動server
 
 執行```ruby hello_rack.rb```，開啟瀏覽器 http://localhost:8080，會看到以下畫面：
 
