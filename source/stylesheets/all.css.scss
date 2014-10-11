@@ -8,7 +8,25 @@ body {
   // background-image: url(http://subtlepatterns.com/patterns/noisy_grid.png);
   min-height: 500px;
 }
+a {
+  background: transparent;
+}
 
+a {
+  color: rgb(0,0,0);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: rgb(32, 92, 156);
+  text-decoration: none;
+}
+
+a:focus,
+a:active {
+  text-decoration: none;
+}
 
 .doc {
   font-size: 14px;
