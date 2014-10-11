@@ -1,6 +1,6 @@
 ---
 title: Hello Rack
-date: 2014-10-11 10:59 UTC
+date: 2014-10-10 10:59 UTC
 tags: Ruby
 published: true
 ---
