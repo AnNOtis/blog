@@ -32,7 +32,7 @@
   function get_current_p(scroll_position) {
     var $result
     $.each(h2_list, function(index, item) {
-      if(scroll_position+20 > item.position){
+      if(scroll_position > item.position){
         $result = item.$elem
       }
     });

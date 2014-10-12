@@ -46,14 +46,14 @@ Rack::Handler::WEBrick.run HelloRack.new
 ~~~
 [ Status Code, Http Header, Response body ]
 ~~~
-- Status code: 可以指定200, 400, 302等
-- Http headers: http的標頭，型態需為**hash**，hash的內容至少要指定content-type，例：{"Content-Type" => "text/html"}
-- Response body: 回傳的內容，此物件必須能夠回應each這個方法，使用array就可以了，如果他有多個Response body則會由第一個元素開始輸出。
+- **Status code**: 可以指定200, 400, 302等
+- **Http headers**: http的標頭，型態需為hash，hash的內容至少要指定content-type，例：{"Content-Type" => "text/html"}
+- **Response body**: 回傳的內容，此物件必須能夠回應each這個方法，使用array就可以了，如果他有多個Response body則會由第一個元素開始輸出。
 
 所以如果call回傳的是像這樣的內容：
 
 ~~~ ruby
-[ 200, {"Content-Type" => "text/html"}, ["Hello Rack!"] ]
+[ 200, {"Content-Type" => "text/plain"}, ["Hello Rack!"] ]
 ~~~
 打開chrome console來看：
 ![Rack Response][2]
@@ -61,7 +61,7 @@ Rack::Handler::WEBrick.run HelloRack.new
 就是這樣囉～
 
 ## Request
-call裡面傳入參數env，但在上一段的程式完全沒有用到，那是因為上一個程式只是為了輸出hello world的字樣，而call所接收的唯一的參數，就是environment的資訊，那environment的資訊包含哪些呢？利用上一節的response，我們可以把environment打開來看看裡頭有什麼。
+可以看到```call(env)```這個方法傳入唯一的參數**env**，但在上一段的程式完全沒有用到參數env，實際上參數env就是**environment的資訊**，那environment的資訊包含哪些呢？利用上一節的response，我們可以把environment打開來看看裡頭有什麼。
 
 ~~~ ruby
 require "rack"
