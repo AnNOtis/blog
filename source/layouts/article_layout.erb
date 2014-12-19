@@ -1,16 +1,15 @@
 <% wrap_layout :layout do %>
-  <div class="posts">
-    <div class="header">
-      <h1><%= current_article.title %></h1>
-      <div class="date"><%= current_article.date.strftime('%^B %e, %Y') %></div>
-    </div>
-    <!-- use article.summary(250) if you have Nokogiri available to show just
-         the first 250 characters -->
-    <div class="content">
-      <div class="chapter-hint"></div>
-      <%= yield %>
-    </div>
+  <div class="symbol"></div>
+  <div class="titleBlock">
+    <h1><%= current_article.title %></h1>
+    <div class="date"><%= current_article.date.strftime('%^B %e, %Y') %></div>
   </div>
+  <!-- use article.summary(250) if you have Nokogiri available to show just
+       the first 250 characters -->
+  <article class="content">
+    <!-- <div class="chapter-hint"></div> -->
+    <%= yield %>
+  </article>
   <%= disqus %>
 <% end %>
 <script>
