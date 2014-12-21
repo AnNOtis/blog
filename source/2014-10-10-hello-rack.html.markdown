@@ -132,7 +132,7 @@ Rack::Handler::WEBrick.run RackApp.new
 基本的rack就是這樣啦，下個相關的研究議題 **什麼是Rack Middleware?**、**Rails中的Rack Middleware**，改天介紹。
 
 
-##參考文獻
+##參考資料
 - [Rack官網](http://rack.github.io/)
 - [RailsCast 151-Rack-middleware](http://asciicasts.com/episodes/151-rack-middleware)
 - [Rack app with uri and HTTP specific responses](https://github.com/rack/rack/wiki/Rack-app-with-uri-and-HTTP-specific-responses)

@@ -1,9 +1,10 @@
 =content-block
-  width: $contentWidth
+  max-width: $contentWidth
+  padding: 0 1em
   margin: 0 auto
 
 =title-block
-  width: $titleWidth
+  padding: 0 $contentWidth - $titleWidth
   margin: 0 auto
 
 
@@ -21,14 +22,35 @@
 html
 
 body
-  min-height: 100vh
+  position: relative
   color: $black
   background-color: $paper
   font-family: $fontFamilyContent
 
 p
-  width: $contentWidth
-  margin: 1em auto
+  margin: rhythm(1) auto
+
+blockquote
+  +title-block
+  margin: rhythm(1) auto
+  quotes: "\201C""\201D"
+  color: #646E84
+  font-style: italic
+
+blockquote:before
+  color: #ccc
+  content: open-quote
+  font-size: 4em
+  line-height: 0.1em
+  margin-right: 0.25em
+  vertical-align: -0.4em
+
+blockquote p
+  display: inline
+
+.container
+  +content-block
+  word-break: break-word
 
 // -------------------------------------
 //   Link
@@ -59,15 +81,35 @@ p code
   border-radius: 3px
   background-color: #fefefe
 
-pre
-  padding: rhythm(1) 0
+.highlight
+  padding: rhythm(1)
+  pre
+    padding: 0
+    margin: 0
+    color: #8FA1B3
   code
-    +title-block
     display: block
     padding: 0
     color: #8FA1B3
     background-color: transparent
 
+.highlight
+//
+//   padding: rhythm(1) 0
+//   padding-left: 1em
+//   .gutter
+//     padding-right: 1em
+//     .lineno
+//       color: #999
+//   pre
+//     padding: 0
+//     margin: 0
+//     color: #8FA1B3
+//   code
+//     display: block
+//     padding: 0 2em
+//     color: #729AB3
+//     background-color: transparent
 // -------------------------------------
 //   head tag
 // -------------------------------------
@@ -78,12 +120,10 @@ h3,
 h4,
 h5,
 h6
-  +content-block
   font-family: $fontFamilyHeader
 
 h1
   +adjust-font-size-to(42px, 2)
-  width: $titleWidth
 
 h2
   +adjust-font-size-to(26px)
@@ -92,21 +132,27 @@ h2
 // -------------------------------------
 //   ul
 // -------------------------------------
+ul
+  list-style: circle
+  margin: 0
+  padding: 0
 
 article
   ul, ol
-    +content-block
-
-ul
-  list-style: circle
-
+    +title-block
+    margin: rhythm(1) auto
 
 article
   img
     display: block
-    max-width: $contentWidth
+    max-width: 100%
+    width: content-block
 
 
 
 .titleBlock
   +title-block
+
+.fixed-bottom
+  position: fixed
+  bottom: 0

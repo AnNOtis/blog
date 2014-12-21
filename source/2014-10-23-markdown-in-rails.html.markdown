@@ -1,7 +1,7 @@
 ---
 title: markdown-in-rails
 date: 2014-10-23 12:30 UTC
-tags: Rails Markdown
+tags: Rails, Markdown
 ---
 
 ## Why Markdown?

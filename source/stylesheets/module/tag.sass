@@ -1,0 +1,21 @@
+.tags .container
+  text-align: center
+
+.tag
+  display: inline-block
+  font-family: $fontFamilyCode
+  margin-right: 1em
+
+.tag-color
+  display: inline-block
+  width: 0.5em
+  height: 0.5em
+  border-radius: 50%
+  background-color: $gray
+  margin-right: 4px
+
+$tag-colors:(ruby: #FD1818,rails: #FF6100,ux: #4E7EB6, design: #CD3893)
+
+@each $tag, $color in $tag-colors
+  .#{$tag}.tag-color
+    background-color: #{$color}

@@ -2,7 +2,7 @@
 # the following line to use "https"
 source 'http://rubygems.org'
 
-gem "middleman", "~> 3.3.3"
+gem "middleman"
 gem "middleman-blog", "~> 3.5.3"
 gem "middleman-syntax"
 
@@ -18,6 +18,3 @@ gem "middleman-disqus"
 
 #for config.ru try_static
 gem "rack-contrib"
-
-gem "sass"
-gem "compass"

@@ -1,7 +1,7 @@
 ---
 title: typography-basic
 date: 2014-10-23 12:55 UTC
-tags: UX design
+tags: UX,design
 ---
 
 http://www.fonts.com/content/learning/fontology/level-1

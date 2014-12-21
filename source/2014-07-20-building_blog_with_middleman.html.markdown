@@ -4,12 +4,6 @@ date: 2014-07-20 06:35 UTC
 tags: Ruby
 ---
 
-###參考文件
-- [Moving to Middleman](http://www.patricklenz.co/blog/2013/6/2/moving-to-middleman)
-- [Middleman官方文件](http://middlemanapp.com/)
-
----
-
 ##安裝 Middleman
 
 Middleman是用Ruby所寫的，在安裝Middleman之前必須先安裝Ruby，安裝可以參考這篇 [Ruby下載安裝](https://www.ruby-lang.org/zh_tw/downloads/)，Mac OS X Mavericks 系統內建 Ruby 2.0.0，可以用```ruby -v```進行確認是否安裝。
@@ -124,3 +118,6 @@ tags:
 這篇主要是介紹用Middleman寫部落格的基本設定，但是看那出現的醜醜頁面令人無法忍受，就知道還缺很多東西啊阿啊啊！下篇繼續介紹Middleman blogging extension，如何更改layout與style設定，以及很必要的syntax highlight。
 
 
+##參考資料
+- [Moving to Middleman](http://www.patricklenz.co/blog/2013/6/2/moving-to-middleman)
+- [Middleman官方文件](http://middlemanapp.com/)

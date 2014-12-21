@@ -1,41 +1,19 @@
 <% wrap_layout :layout do %>
   <div class="symbol"></div>
   <div class="titleBlock">
+    <% current_article.tags.each do |tag| %>
+      <span class="tag" data-color="#345"><span class="tag-color <%= tag.downcase %>"></span><%= tag %></span>
+    <% end %>
     <h1><%= current_article.title %></h1>
     <div class="date"><%= current_article.date.strftime('%^B %e, %Y') %></div>
   </div>
   <!-- use article.summary(250) if you have Nokogiri available to show just
        the first 250 characters -->
   <article class="content">
-    <!-- <div class="chapter-hint"></div> -->
     <%= yield %>
   </article>
   <%= disqus %>
 <% end %>
 <script>
-  var h2_list = [];
-  $().ready(function() {
-    $("h2").each(function(index,item) {
-      h2_list[index] = { position: $(item).offset().top, $elem: $(item)}
-    })
-    $( window ).scroll(function() {
-      var $current_p = get_current_p($(this).scrollTop());
-      if($current_p){
-        $(".chapter-hint").text($current_p.text()).css('top', $(this).scrollTop());
-        $(".chapter-hint").css('opacity', 0.9);
-      }else{
-        $(".chapter-hint").css('opacity', 0);
-      }
-    });
-  });
-  function get_current_p(scroll_position) {
-    var $result
-    $.each(h2_list, function(index, item) {
-      if(scroll_position > item.position){
-        $result = item.$elem
-      }
-    });
-    return $result;
-  };
 
 </script>

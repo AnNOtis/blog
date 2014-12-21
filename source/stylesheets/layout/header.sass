@@ -16,6 +16,14 @@ header
   img
     height: 100%
 
+.header-menu
+  display: none
+  float: right
+  height: 100%
+  padding: rhythm(1.2) 0 rhythm(0.8) 0
+  font-family: $fontFamilyCode
+  cursor: pointer
+  border: 1px
 
 nav
   float: right
@@ -44,3 +52,33 @@ nav
     border-bottom: 2px solid transparent
   a:hover,
     border-bottom: 2px solid $black
+
+@media (min-width: 500px)
+  nav
+    display: block !important
+@media (max-width: 500px)
+  nav
+    display: none
+    position: fixed
+    height: 100vh
+    width: 100%
+    left: 0
+    z-index: 999
+    background-color: $white
+    li
+      display: block
+      width: 100%
+      height: auto
+      padding: 0
+      border-bottom: 1px solid #eee
+      text-align: center
+      margin: 0
+      a
+        width: 100%
+        padding: rhythm(1) 0
+        height: 100%
+        &:hover
+          background-color: #eee
+          border-bottom: 2px solid transparent
+  .header-menu
+    display: inline-block

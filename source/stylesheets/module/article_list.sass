@@ -1,0 +1,24 @@
+.article-list
+  +content-block
+  position: relative
+  list-style: none
+  font-family: $fontFamilyHeader
+  margin: rhythm(3) auto
+  li
+    margin: rhythm(1) auto
+    .title
+      +adjust-font-size-to(20px)
+      padding-right: 120px
+      a
+        color: $blue
+        border: 2px solid transparent
+        &:hover
+          color: $lightenBlue
+          border-bottom: 2px solid transparent
+    .date
+      font-family: $fontFamilyCode
+      font-size: 16px
+      position: absolute
+      display: block
+      right: 0
+      color: #646E84
