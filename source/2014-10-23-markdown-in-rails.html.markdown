@@ -2,6 +2,7 @@
 title: markdown-in-rails
 date: 2014-10-23 12:30 UTC
 tags: Rails, Markdown
+published: false
 ---
 
 ## Why Markdown?
