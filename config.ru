@@ -1,6 +1,7 @@
 require 'rack'
 require 'rack/contrib/try_static'
 
+`bundle`
 `bundle exec middleman build`
 
 # Serve files from the build directory
