@@ -19,7 +19,7 @@ $().ready(function() {
 
 
   $('#menu').click(function() {
-    $('nav').toggle();
+    $('nav').toggleClass('is_active');
   });
 
 });

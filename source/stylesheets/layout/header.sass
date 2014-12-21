@@ -21,7 +21,6 @@ header
   position: relative
   display: none
   float: right
-  height: 100%
   padding: rhythm(1.2) 0 rhythm(0.8) 1.25em
   font-family: $fontFamilyCode
   cursor: pointer
@@ -64,12 +63,16 @@ nav
     border-bottom: 2px solid transparent
   a:hover,
     border-bottom: 2px solid $black
+  &.is_active ul
+    display: block !important
 
 @media (min-width: 500px)
-  nav
+  nav ul
     display: block !important
 @media (max-width: 500px)
-  nav
+  .header-menu
+    display: inline-block
+  nav ul
     display: none
     position: fixed
     height: 100vh
@@ -94,9 +97,3 @@ nav
         &:hover
           background-color: #eee
           border-bottom: 2px solid transparent
-
-  .header-menu
-    position: fixed
-    display: inline-block
-    right: $contentWidth - $titleWidth
-

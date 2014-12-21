@@ -10,6 +10,7 @@
     margin: rhythm(1) auto
     .title
       +adjust-font-size-to(20px)
+      display: block
       padding-right: 120px
       a
         color: $blue
@@ -18,9 +19,15 @@
           color: $lightenBlue
           border-bottom: 2px solid transparent
     .date
-      font-family: $fontFamilyCode
-      font-size: 16px
       position: absolute
       display: block
       right: 0
+      font-size: 16px
+      font-family: $fontFamilyCode
       color: #646E84
+
+  @media (max-width: 500px)
+    li .date
+      position: relative
+    li .title
+      padding-right: 0
