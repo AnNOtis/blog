@@ -48,3 +48,16 @@ $contentWidth: 720px
 // -------------------------------------
 
 $default-transition-duration: 0.3s
+
+// -------------------------------------
+//   mixin
+// -------------------------------------
+
+=content-block
+  max-width: $contentWidth
+  padding: 0 1em
+  margin: 0 auto
+
+=title-block
+  padding: 0 $contentWidth - $titleWidth
+  margin: 0 auto
