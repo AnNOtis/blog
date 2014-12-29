@@ -1,0 +1,49 @@
+---
+title: Kibana
+date: 2014-12-23 08:49 UTC
+tags: Elasticsearch, Kibana
+published: false
+---
+
+download kibana
+架一個static file server run檔案
+我用node架
+
+~~~ javascript
+var static = require('node-static');
+
+//
+// Create a node-static server instance to serve the './public' folder
+//
+var file = new static.Server('./');
+
+require('http').createServer(function (request, response) {
+    request.addListener('end', function () {
+        //
+        // Serve files!
+        //
+        file.serve(request, response);
+    }).resume();
+}).listen(8080);
+~~~
+
+修改config.js
+
+~~~
+elasticsearch: "http://localhost:9200"
+~~~
+
+設定elasticsearch根目錄下的`config/elasticsearch.yml`，加入:
+
+~~~ yml
+http.cors.enabled: true
+http.cors.allow-origin: "http://localhost:8080"
+~~~
+
+restart elasticsearch
+
+~~~ sh
+curl -XPOST 'http://localhost:9200/_shutdown'
+~~~
+
+open `localhost:8080`，就可以看到kibana的dashboard囉～
