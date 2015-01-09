@@ -73,6 +73,8 @@ GEM
       tilt (~> 1.4.1, < 2.0)
     middleman-disqus (1.0.0)
       middleman-core (~> 3.1)
+    middleman-meta-tags (0.1.2)
+      middleman-core (>= 3.0.0)
     middleman-sprockets (3.3.10)
       middleman-core (~> 3.3)
       sprockets (~> 2.12.1)
@@ -132,6 +134,7 @@ DEPENDENCIES
   middleman
   middleman-blog (~> 3.5.3)
   middleman-disqus
+  middleman-meta-tags
   middleman-syntax
   nokogiri
   rack-contrib

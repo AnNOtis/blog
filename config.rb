@@ -4,6 +4,7 @@
 
 # Time.zone = "UTC"
 activate :syntax
+activate :meta_tags
 set :markdown_engine, :kramdown
 activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths

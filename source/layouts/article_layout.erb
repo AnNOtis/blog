@@ -1,8 +1,11 @@
 <% wrap_layout :layout do %>
+  <% title current_article.title %>
+  <% description current_article.summary(200) %>
+  <% keywords current_article.tags.join(', ') %>
   <div class="symbol"></div>
   <div class="titleBlock">
     <div class="date"><%= current_article.date.strftime('%^B %e, %Y') %></div>
-    <h1><%= current_article.title %></h1>
+    <h1><%=current_article.title %></h1>
     <% current_article.tags.each do |tag| %>
       <span class="tag" data-color="#345"><span class="tag-color <%= tag.downcase %>"></span><%= link_to "#{tag}", tag_path(tag) %></span>
     <% end %>
