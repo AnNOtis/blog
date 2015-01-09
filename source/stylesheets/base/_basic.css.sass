@@ -62,8 +62,9 @@ code
   font-family: $fontFamilyCode
 
 p code
-  margin: 0 0.2em
-  padding: 0.2em 0.4em
+  margin: 0 .2em
+  padding: 0 .4em
+  line-height: 1.8em
   color: $blue
   border-radius: 3px
   background-color: #fefefe
@@ -115,8 +116,9 @@ h1
   +adjust-font-size-to(42px, 2)
 
 h2
-  +adjust-font-size-to(26px)
-  margin: rhythm(2, 26px) auto rhythm(1, 26px) auto
+  +adjust-font-size-to(28px)
+  margin: rhythm(2, 28px) auto rhythm(1, 28px) auto
+  border-bottom: 1px dashed $whitesmoke
 
 // -------------------------------------
 //   ul
@@ -140,9 +142,11 @@ article
 
 
 .titleBlock
+  text-align: center
   @media (min-width: 500px)
     +title-block
   .date
+    color: $gray
     font-family: $fontFamilyCode
 
 .fixed-bottom

@@ -1,11 +1,11 @@
 <% wrap_layout :layout do %>
   <div class="symbol"></div>
   <div class="titleBlock">
-    <% current_article.tags.each do |tag| %>
-      <span class="tag" data-color="#345"><span class="tag-color <%= tag.downcase %>"></span><%= tag %></span>
-    <% end %>
-    <h1><%= current_article.title %></h1>
     <div class="date"><%= current_article.date.strftime('%^B %e, %Y') %></div>
+    <h1><%= current_article.title %></h1>
+    <% current_article.tags.each do |tag| %>
+      <span class="tag" data-color="#345"><span class="tag-color <%= tag.downcase %>"></span><%= link_to "#{tag}", tag_path(tag) %></span>
+    <% end %>
   </div>
   <!-- use article.summary(250) if you have Nokogiri available to show just
        the first 250 characters -->

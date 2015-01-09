@@ -5,7 +5,8 @@
 .tag
   display: inline-block
   font-family: $fontFamilyCode
-  margin-right: 1em
+  a
+    border-bottom: none
 
 .tag-color
   display: inline-block
@@ -20,3 +21,9 @@ $tag-colors:(ruby: #FD1818, ror: #FF6100, ux: #4E7EB6, design: #CD3893, elastics
 @each $tag, $color in $tag-colors
   .#{$tag}.tag-color
     background-color: #{$color}
+
+body.tags .tag
+  margin: 0.2em 0.5em
+
+.titleBlock .tag
+  margin: 0 0.5em
