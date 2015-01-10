@@ -1,11 +1,12 @@
 <!doctype html>
-<html>
+<html lang="zh-Hant-TW">
   <head>
     <meta charset="utf-8">
-
+    <meta http-equiv="Content-Language" content="zh-tw" />
     <!-- Always force latest IE rendering engine or request Chrome Frame -->
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:image" content="http://blog.otisready.com/images/Otis@3x.png" />
     <%= display_meta_tags site: 'Otis Blog' %>
     <!-- Use title if it's in the page YAML frontmatter -->
     <!-- <title><%= current_page.data.title || "Otis Blog" %></title> -->
@@ -36,13 +37,30 @@
       <div class="contact"></div>
     </footer>
     <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'UA-55636222-1', 'auto');
-    ga('send', 'pageview');
+      ga('create', 'UA-55636222-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1589247067973244',
+          xfbml      : true,
+          version    : 'v2.2'
+        });
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/zh_TW/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
     </script>
   </body>
   <%= javascript_include_tag  "all" %>
