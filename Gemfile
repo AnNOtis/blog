@@ -10,7 +10,7 @@ gem 'middleman-meta-tags'
 # For feed.xml.builder
 gem "builder", "~> 3.0"
 gem 'rouge'
-# gem "redcarpet"
+gem "redcarpet"
 
 gem "nokogiri"
 

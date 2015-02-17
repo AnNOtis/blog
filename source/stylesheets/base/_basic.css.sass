@@ -11,21 +11,30 @@
 body
   position: relative
   color: $black
-  background-color: $paper
+  // background-color: $paper
   font-family: $fontFamilyContent
 
 p
   margin: rhythm(1) auto
+  margin-top: 0
 
 blockquote
   +title-block
   margin: rhythm(1) auto
-  quotes: "\201C""\201D"
-  color: #646E84
-  font-style: italic
+  quotes: "“" "”"
+  color: #646e84
+  word-spacing: 0.2em
+  footer
+    display: block
+    min-height: 0
+    margin: 0
+    padding: 0
+    font-size: 75%
+    text-align: right
+    background-color: transparent
 
 blockquote:before
-  color: #ccc
+  color: #cccccc
   content: open-quote
   font-size: 4em
   line-height: 0.1em
@@ -39,6 +48,10 @@ blockquote p
   +content-block
   word-break: break-word
 
+em
+  color: $carmine
+  font-style: normal
+
 // -------------------------------------
 //   Link
 // -------------------------------------
@@ -47,10 +60,10 @@ a
   +single-transition
   color: $lightenBlue
   text-decoration: none
-  border-bottom: 2px solid $gray
+  border-bottom: 1px solid $gray
   &:hover
     color: $blue
-    border-bottom: 2px solid
+    border-bottom: 1px solid
   &:active
     color: $darkenBlue
 
@@ -62,8 +75,8 @@ code
   font-family: $fontFamilyCode
 
 p code
-  margin: 0 .2em
-  padding: 0 .4em
+  margin: 0 0.2em
+  padding: 0 0.4em
   line-height: 1.8em
   color: $blue
   border-radius: 3px
@@ -75,11 +88,11 @@ p code
   pre
     padding: 0
     margin: 0
-    color: #8FA1B3
+    color: #8fa1b3
   code
     display: block
     padding: 0
-    color: #8FA1B3
+    color: #8fa1b3
     background-color: transparent
 
 //.highlight
@@ -120,6 +133,10 @@ h2
   margin: rhythm(2, 28px) auto rhythm(1, 28px) auto
   border-bottom: 1px dashed $whitesmoke
 
+h3
+  +adjust-font-size-to(20px)
+  +rhythm(0.7, 0, 0, 0.3, 20px)
+
 // -------------------------------------
 //   ul
 // -------------------------------------
@@ -139,13 +156,16 @@ article
     max-width: 100%
     width: content-block
 
-
-
 .titleBlock
-  text-align: center
   @media (min-width: 500px)
-    +title-block
+  margin-bottom: rhythm(2)
+  h1
+    margin-bottom: 10px
+  .date,
+  .tag
+    font-size: $baseFontSize * 0.8
   .date
+    margin-right: 1em
     color: $gray
     font-family: $fontFamilyCode
 

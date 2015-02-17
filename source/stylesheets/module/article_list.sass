@@ -1,9 +1,11 @@
 @import compass
 @import base/config
+
 .article-list
   +content-block
   position: relative
   margin: rhythm(2) auto
+  padding-left: 0
   font-family: $fontFamilyHeader
   list-style: none
   text-align: left
@@ -27,8 +29,7 @@
       right: 0
       font-size: 16px
       font-family: $fontFamilyCode
-      color: #646E84
-
+      color: #646e84
   @media (max-width: 500px)
     li .date
       position: relative

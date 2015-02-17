@@ -1,4 +1,5 @@
 @import base/config
+
 .tags .container
   text-align: center
 
@@ -16,7 +17,7 @@
   background-color: $gray
   margin-right: 4px
 
-$tag-colors:(ruby: #FD1818, ror: #FF6100, ux: #4E7EB6, design: #CD3893, elasticsearch: #74B73F)
+$tag-colors: (ruby: #FD1818, ror: #FF6100, ux: #4E7EB6, 設計: #CD3893, elasticsearch: #74B73F, css: #7E57FA, 前端: #FFD94F)
 
 @each $tag, $color in $tag-colors
   .#{$tag}.tag-color

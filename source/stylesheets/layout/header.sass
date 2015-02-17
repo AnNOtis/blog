@@ -1,13 +1,14 @@
 @import base/config
+
 header
+  +content-block
   display: block
-  padding: 0 4em
   height: rhythm(3)
   background-color: $white
 
 .header-logo
   display: inline-block
-  padding: rhythm(1) 0
+  padding: 1.4em 0
   height: 100%
   text-decoration: none
   border: 0
@@ -35,9 +36,11 @@ header
     height: 0.15em
     background: $black
     box-shadow: 0 0.25em 0 0 $black, 0 0.5em 0 0 $black
+
 nav.is_active
   .header-menu
     position: fixed
+
 nav
   float: right
   display: block
@@ -55,7 +58,7 @@ nav
     padding: rhythm(1.2) 0 rhythm(0.8) 0
   a,
   a:hover,
-  a:active,
+  a:active
     display: inline-block
     height: 100%
     line-height: rhythm(1)
@@ -63,7 +66,7 @@ nav
     text-decoration: none
     border: 0
     border-bottom: 2px solid transparent
-  a:hover,
+  a:hover
     border-bottom: 2px solid $black
   &.is_active ul
     display: block !important
@@ -71,6 +74,7 @@ nav
 @media (min-width: 500px)
   nav ul
     display: block !important
+
 @media (max-width: 500px)
   .header-menu
     display: inline-block
@@ -89,7 +93,7 @@ nav
       width: 100%
       height: auto
       padding: 0
-      border-bottom: 1px solid #eee
+      border-bottom: 1px solid #eeeeee
       text-align: center
       margin: 0
       a
@@ -97,5 +101,5 @@ nav
         padding: rhythm(1) 0
         height: 100%
         &:hover
-          background-color: #eee
+          background-color: #eeeeee
           border-bottom: 2px solid transparent

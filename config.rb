@@ -5,7 +5,8 @@
 # Time.zone = "UTC"
 activate :syntax
 activate :meta_tags
-set :markdown_engine, :kramdown
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true, :smartypants => true
 activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
   # blog.prefix = "blog"
@@ -15,8 +16,8 @@ activate :blog do |blog|
   # blog.sources = "{year}-{month}-{day}-{title}.html"
   blog.taglink = "tags/{tag}.html"
   blog.layout = "article_layout"
-  # blog.summary_separator = /(READMORE)/
-  # blog.summary_length = 250
+  blog.summary_separator = /<!--more-->/
+  blog.summary_length = 200
   # blog.year_link = "{year}.html"
   # blog.month_link = "{year}/{month}.html"
   # blog.day_link = "{year}/{month}/{day}.html"
