@@ -6,6 +6,8 @@ tags: 工作環境, SublimeText
 
 這篇對自己平常使用Sublime Text的習慣做個紀錄，Sublime Text的功能很多，還有很多操作方式或工具沒有記錄在這裏，但目前使用起來還對我來說蠻夠用的，分享給有需要的人。
 
+<!--more-->
+
 - 版本: Sublime Text 3
 - 作業系統: OSX
 
