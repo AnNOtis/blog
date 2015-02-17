@@ -2,6 +2,7 @@
 title: Thinking Structure
 date: 2015-01-11 05:53 UTC
 tags: 筆記
+published: false
 ---
 
 ### 落實多人合作style guild， 命名與framework如何落實，怎麼避免被覆蓋?
