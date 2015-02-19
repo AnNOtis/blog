@@ -1,13 +1,13 @@
 @import base/config
 
-.tags .container
-  text-align: center
-
 .tag
   display: inline-block
   font-family: $fontFamilyCode
   a
     border-bottom: none
+    color: $gray
+    &:hover
+      color: $blue
 
 .tag-color
   display: inline-block
@@ -17,7 +17,7 @@
   background-color: $gray
   margin-right: 4px
 
-$tag-colors: (ruby: #FD1818, ror: #FF6100, ux: #4E7EB6, 設計: #CD3893, elasticsearch: #74B73F, css: #7E57FA, 前端: #FFD94F)
+$tag-colors: (ruby: #fd1818, ror: #ff6100, ux: #4e7eb6, 設計: #cd3893, elasticsearch: #74b73f, css: #7e57fa, 前端: #ffd94f)
 
 @each $tag, $color in $tag-colors
   .#{$tag}.tag-color
@@ -25,6 +25,10 @@ $tag-colors: (ruby: #FD1818, ror: #FF6100, ux: #4E7EB6, 設計: #CD3893, elastic
 
 body.tags .tag
   margin: 0.2em 0.5em
+
+.tag-collection
+  margin-top: rhythm(4, 14px)
+  font-size: 14px
 
 .titleBlock .tag
   margin: 0 0.5em

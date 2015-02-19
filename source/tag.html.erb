@@ -3,11 +3,13 @@ pageable: true
 per_page: 12
 ---
 
+
 <h2>Articles tagged
   <span class="tag">
     <span class="tag-color <%= tagname.downcase %>"></span><%= tagname %>
   </span>
 </h2>
+
 
 <% if paginate && num_pages > 1 %>
   <p>Page <%= page_number %> of <%= num_pages %></p>
@@ -26,6 +28,15 @@ per_page: 12
     </li>
   <% end %>
 </ul>
+
+<div class="tag-collection">
+  <% blog.tags.each do |tag, articles| %>
+    <span class="tag">
+      <span class="tag-color <%= tag.downcase %>"></span>
+      <%= link_to "#{tag} (#{articles.size})", tag_path(tag) %>
+    </span>
+  <% end %>
+</div>
 
 <% if paginate %>
   <% if next_page %>

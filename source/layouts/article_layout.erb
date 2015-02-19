@@ -2,7 +2,7 @@
   <% title current_article.title %>
   <% description current_article.summary(200) %>
   <% keywords current_article.tags.join(', ') %>
-  <div class="symbol"></div>
+  <!-- <div class="symbol"></div> -->
   <div class="titleBlock">
     <h1><%=current_article.title %></h1>
     <span class="date"><%= current_article.date.strftime('%^B %e, %Y') %></span>
