@@ -16,7 +16,6 @@ body
 
 p
   margin: rhythm(1) auto
-  margin-top: 0
 
 blockquote
   +title-block
@@ -29,6 +28,7 @@ blockquote
     min-height: 0
     margin: 0
     padding: 0
+    border: 0
     font-size: 75%
     text-align: right
     background-color: transparent
@@ -78,13 +78,15 @@ p code
   margin: 0 0.2em
   padding: 0 0.4em
   line-height: 1.8em
-  color: #8b8b8b
+  color: #646e84
   border-radius: 3px
-  background-color: #fefefe
+  background-color: $paper
   border: 1px solid #eeeeee
 
 .highlight
   padding: rhythm(1)
+  font-size: 16px
+  background-color: $paper
   pre
     padding: 0
     margin: 0

@@ -5,7 +5,7 @@
 # Time.zone = "UTC"
 activate :syntax
 activate :meta_tags
-activate :asset_hash
+
 set :markdown_engine, :redcarpet
 set :markdown, :fenced_code_blocks => true, :smartypants => true
 activate :blog do |blog|
@@ -101,10 +101,10 @@ configure :build do
   activate :minify_css
 
   # Minify Javascript on build
-  # activate :minify_javascript
+  activate :minify_javascript
 
   # Enable cache buster
-  # activate :asset_hash
+  activate :asset_hash
 
   # Use relative URLs
   # activate :relative_assets
