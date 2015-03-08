@@ -89,17 +89,21 @@ p code
   border: 1px solid #eeeeee
 
 .highlight
-  padding: rhythm(1)
-  font-size: 16px
-  background-color: $paper
-  border-radius: 3px
+  display: block
+  padding: rhythm(1, 16px)
   border: 1px solid #eeeeee
-  pre
-    padding: 0
-    margin: 0
-    color: #8fa1b3
+  border-radius: 3px
+  font-size: 16px
+  line-height: 1.5em
+  background-color: $paper
+  overflow-x: scroll
+  white-space: pre
+  word-wrap: normal
+  @media (max-width: 500px)
+    padding: rhythm(1, 14px)
+    font-size: 14px
   code
-    display: block
+    display: inline-block
     padding: 0
     color: #8fa1b3
     background-color: transparent
@@ -164,6 +168,9 @@ article
   ul, ol
     +title-block
     margin: rhythm(1) auto
+    @media (max-width: 500px)
+      padding-left: 2em
+      padding-right: 2em
 
 article
   img
