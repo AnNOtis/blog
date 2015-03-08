@@ -32,6 +32,8 @@ blockquote
     font-size: 75%
     text-align: right
     background-color: transparent
+  @media (max-width: 500px)
+    padding: 0
 
 blockquote:before
   color: #cccccc
@@ -47,6 +49,9 @@ blockquote p
 .container
   +content-block
   word-break: break-word
+  @media (max-width: 500px)
+    padding-left: 1em
+    padding-right: 1em
 
 em
   color: $carmine
@@ -87,6 +92,8 @@ p code
   padding: rhythm(1)
   font-size: 16px
   background-color: $paper
+  border-radius: 3px
+  border: 1px solid #eeeeee
   pre
     padding: 0
     margin: 0
@@ -126,6 +133,7 @@ h4,
 h5,
 h6
   font-family: $fontFamilyHeader
+  color: #333333
 
 h1
   +adjust-font-size-to(42px, 2)
@@ -138,6 +146,11 @@ h2
 h3
   +adjust-font-size-to(20px)
   +rhythm(0.7, 0, 0, 0.3, 20px)
+
+body.index,
+body.tags
+  h2
+    color: #aaaaaa
 
 // -------------------------------------
 //   ul
@@ -160,7 +173,7 @@ article
 
 .titleBlock
   @media (min-width: 500px)
-  margin-bottom: rhythm(2)
+  margin: rhythm(2) auto
   h1
     margin-bottom: 10px
   .date,
