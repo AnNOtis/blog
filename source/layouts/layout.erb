@@ -15,21 +15,17 @@
     <link rel="shortcut icon" href="/images/favicon.ico?v3" type="image/x-icon" />
     <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,700' rel='stylesheet' type='text/css'>
     <%= stylesheet_link_tag "all" %>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
   </head>
 
   <body class="<%= page_classes %>">
     <header class="tc">
-      <a class="header-logo" href="/">Otis.Chou</a>
-
-      <!-- <nav>
-        <span id="menu" class="header-menu">Menu</span>
-        <ul>
-          <li><a href="/">Article</a></li>
-          <li><a href="/tags.html">Tag</a></li>
-          <li><a href="/about">About</a></li>
-        </ul>
-      </nav> -->
+      <div>
+        <a href="/" class="LogoClub"><span class="LogoClub-subtitle">- I'm Otis.Chou</span></a>
+      </div>
+      <a class="header-item" href="/index.html">Article</a>
+      <a class="header-item" href="/tags.html">Tag</a>
+      <a class="header-item" href="http://feeds.feedburner.com/otistw">RSS</a>
     </header>
     <div class="container">
       <%= yield %>
@@ -64,6 +60,6 @@
          fjs.parentNode.insertBefore(js, fjs);
        }(document, 'script', 'facebook-jssdk'));
     </script>
+    <%#= javascript_include_tag  "all" %>
   </body>
-  <%= javascript_include_tag  "all" %>
 </html>
