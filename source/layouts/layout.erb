@@ -19,16 +19,18 @@
   </head>
 
   <body class="<%= page_classes %>">
-    <header class="tc">
-      <div>
-        <a href="/" class="LogoClub"><span class="LogoClub-subtitle">- I'm Otis.</span></a>
+    <div class="for-sticky-footer-wrapper">
+      <header class="tc">
+        <div>
+          <a href="/" class="LogoClub"><span class="LogoClub-subtitle">- I'm Otis.</span></a>
+        </div>
+        <a class="header-item" href="/index.html">Article</a>
+        <a class="header-item" href="/tags.html">Tag</a>
+        <a class="header-item" href="http://feeds.feedburner.com/otistw">RSS</a>
+      </header>
+      <div class="container">
+        <%= yield %>
       </div>
-      <a class="header-item" href="/index.html">Article</a>
-      <a class="header-item" href="/tags.html">Tag</a>
-      <a class="header-item" href="http://feeds.feedburner.com/otistw">RSS</a>
-    </header>
-    <div class="container">
-      <%= yield %>
     </div>
     <footer>
       <div class="power-by">Copyright © <a href="mailto:altispec@gmail.com">Otis Chou</a> - Built with <a href="http://middlemanapp.com/">Middleman</a> in Taiwan 2014</div>
